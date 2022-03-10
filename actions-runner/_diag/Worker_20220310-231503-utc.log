@@ -1,0 +1,2489 @@
+[2022-03-10 23:15:03Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO HostContext] Well known config file 'Credentials': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.credentials'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO HostContext] Well known config file 'Runner': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.runner'
+[2022-03-10 23:15:03Z INFO Worker] Version: 2.288.1
+[2022-03-10 23:15:03Z INFO Worker] Commit: e95a2b840b74568ec30c993462165ece91040f8e
+[2022-03-10 23:15:03Z INFO Worker] Culture: es-ES
+[2022-03-10 23:15:03Z INFO Worker] UI Culture: es-ES
+[2022-03-10 23:15:03Z INFO Worker] Waiting to receive the job message from the channel.
+[2022-03-10 23:15:03Z INFO ProcessChannel] Receiving message of length 19406, with hash '96e61d7f94ace94fdef288c0701e1ab79f2df8ea5da00f7bd0bfa53cb873373b'
+[2022-03-10 23:15:03Z INFO Worker] Message received.
+[2022-03-10 23:15:03Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/deploy.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "a60052d4-79a0-5821-3eeb-84adb9872c5b",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 14,
+        "col": 13,
+        "lit": "Build and Run Docker"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 15,
+              "col": 12,
+              "lit": "docker build -t tutorial/hello-world . && docker run -dp 5001:5001 tutorial/hello-world"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dd23db01-cff6-57a4-373a-5c8097a97333",
+      "name": "__run"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.pipelineStartTime": {
+      "value": "2022-03-10 23:15:00+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "5"
+    },
+    "build.containerId": {
+      "value": "6360053"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/deploy.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build"
+    },
+    "system.jobId": {
+      "value": "ca395085-040a-526b-2ce8-bdc85f692774"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 25,
+    "planId": "82acbbc0-9e2b-4a59-b03d-7edd60acc98f",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/5",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "dockerizepython"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "SebasAI95"
+    }
+  },
+  "timeline": {
+    "id": "82acbbc0-9e2b-4a59-b03d-7edd60acc98f",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "ca395085-040a-526b-2ce8-bdc85f692774",
+  "jobDisplayName": "build",
+  "jobName": "__default",
+  "requestId": 5,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "ac656de0-aae7-4556-81d4-9830c0534f1d",
+          "ServerName": "J0Iz7yx8GqaPyGmAEe33sZn5HcqtOdYZdCf4oF4TlVnO7j0EPF",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/J0Iz7yx8GqaPyGmAEe33sZn5HcqtOdYZdCf4oF4TlVnO7j0EPF/"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/J0Iz7yx8GqaPyGmAEe33sZn5HcqtOdYZdCf4oF4TlVnO7j0EPF/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "33e308d4bf4d7fe3b1bf060ffb74a83cb309839f"
+        },
+        {
+          "k": "repository",
+          "v": "SebasAI95/dockerizepython"
+        },
+        {
+          "k": "repository_owner",
+          "v": "SebasAI95"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/SebasAI95/dockerizepython.git"
+        },
+        {
+          "k": "run_id",
+          "v": "1966010039"
+        },
+        {
+          "k": "run_number",
+          "v": "5"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "actor",
+          "v": "SebasAI95"
+        },
+        {
+          "k": "workflow",
+          "v": "deploy"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "33e308d4bf4d7fe3b1bf060ffb74a83cb309839f"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "1c3b1fdac70d49b2d5524c028430b95d70d65533"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "sebquinteromac95@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "sebastian"
+                              },
+                              {
+                                "k": "username",
+                                "v": "SebasAI95"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "sebquinteromac95@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "sebastian"
+                              },
+                              {
+                                "k": "username",
+                                "v": "SebasAI95"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "33e308d4bf4d7fe3b1bf060ffb74a83cb309839f"
+                        },
+                        {
+                          "k": "message",
+                          "v": "PRINT HELLO WORLD 2"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2022-03-10T18:14:53-05:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "5f8e606eeb0a129d65758142ab8fd9ac0cbbd835"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/SebasAI95/dockerizepython/commit/33e308d4bf4d7fe3b1bf060ffb74a83cb309839f"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/SebasAI95/dockerizepython/compare/1c3b1fdac70d...33e308d4bf4d"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "sebquinteromac95@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "sebastian"
+                          },
+                          {
+                            "k": "username",
+                            "v": "SebasAI95"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "sebquinteromac95@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "sebastian"
+                          },
+                          {
+                            "k": "username",
+                            "v": "SebasAI95"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "33e308d4bf4d7fe3b1bf060ffb74a83cb309839f"
+                    },
+                    {
+                      "k": "message",
+                      "v": "PRINT HELLO WORLD 2"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2022-03-10T18:14:53-05:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "5f8e606eeb0a129d65758142ab8fd9ac0cbbd835"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/SebasAI95/dockerizepython/commit/33e308d4bf4d7fe3b1bf060ffb74a83cb309839f"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "sebquinteromac95@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "SebasAI95"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/SebasAI95/dockerizepython.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1646934353.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "SebasAI95/dockerizepython"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/SebasAI95/dockerizepython.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/SebasAI95/dockerizepython"
+                    },
+                    {
+                      "k": "id",
+                      "v": 468450965.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "Dockerfile"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "dockerizepython"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOG-v-lQ"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/69122642?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "sebquinteromac95@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/SebasAI95/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/SebasAI95/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/SebasAI95/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/SebasAI95/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/SebasAI95"
+                          },
+                          {
+                            "k": "id",
+                            "v": 69122642.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "SebasAI95"
+                          },
+                          {
+                            "k": "name",
+                            "v": "SebasAI95"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjY5MTIyNjQy"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/SebasAI95/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/SebasAI95/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/SebasAI95/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/SebasAI95/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/SebasAI95/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/SebasAI95"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1646954098.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 4.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:SebasAI95/dockerizepython.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/SebasAI95/dockerizepython"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/SebasAI95/dockerizepython/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2022-03-10T17:51:11Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/SebasAI95/dockerizepython"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/69122642?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/SebasAI95/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/SebasAI95/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/SebasAI95/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/SebasAI95/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/SebasAI95"
+                    },
+                    {
+                      "k": "id",
+                      "v": 69122642.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "SebasAI95"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjY5MTIyNjQy"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/SebasAI95/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/SebasAI95/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/SebasAI95/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/SebasAI95/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/SebasAI95/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/SebasAI95"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "inputs": null,
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2022-03-10 23:15:03Z INFO JobRunner] Job ID ca395085-040a-526b-2ce8-bdc85f692774
+[2022-03-10 23:15:03Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/J0Iz7yx8GqaPyGmAEe33sZn5HcqtOdYZdCf4oF4TlVnO7j0EPF/
+[2022-03-10 23:15:03Z INFO ConfigurationStore] currentAssemblyLocation: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin/Runner.Worker.dll
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO ConfigurationStore] binPath: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO ConfigurationStore] RootFolder: /home/sebastian/PycharmProjects/dockerizepython/actions-runner
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO HostContext] Well known config file 'Runner': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.runner'
+[2022-03-10 23:15:03Z INFO ConfigurationStore] ConfigFilePath: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/.runner
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO HostContext] Well known config file 'Credentials': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.credentials'
+[2022-03-10 23:15:03Z INFO ConfigurationStore] CredFilePath: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/.credentials
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.credentials_migrated'
+[2022-03-10 23:15:03Z INFO ConfigurationStore] MigratedCredFilePath: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/.credentials_migrated
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:03Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:03Z INFO HostContext] Well known config file 'Service': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.service'
+[2022-03-10 23:15:03Z INFO ConfigurationStore] ServiceConfigFilePath: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/.service
+[2022-03-10 23:15:03Z INFO ConfigurationStore] Read setting file: 306 chars
+[2022-03-10 23:15:04Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-03-10 23:15:04Z INFO Worker] Listening for cancel message from the channel.
+[2022-03-10 23:15:04Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2022-03-10 23:15:04Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-03-10 23:15:04Z INFO JobServerQueue] Start process web console line queue.
+[2022-03-10 23:15:04Z INFO JobServerQueue] Start process file upload queue.
+[2022-03-10 23:15:04Z INFO JobServerQueue] Start process timeline update queue.
+[2022-03-10 23:15:04Z INFO ExecutionContext] Initialize GitHub context
+[2022-03-10 23:15:04Z INFO ExecutionContext] Initialize Env context
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:04Z INFO JobRunner] Starting the job execution context.
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:04Z INFO JobRunner] Validating directory permissions for: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Tools': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_tool'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:04Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:05Z INFO JobRunner] Getting job extension.
+[2022-03-10 23:15:05Z INFO JobRunner] Initialize job. Getting all job steps.
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known config file 'Credentials': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.credentials'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known config file 'SetupInfo': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/.setup_info'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO PipelineDirectoryManager] Loading tracking config if exists: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_PipelineMapping/SebasAI95/dockerizepython/PipelineFolder.json
+[2022-03-10 23:15:05Z INFO PipelineDirectoryManager] Updating job run properties.
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO JobExtension] Downloading actions
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd597a67d-f245-4219-a9d8-fc52ddf92c48', success rate: 1/1.
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:05Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:05Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/tarball/ec3a7ce113134d7a93b817d10a8272cb61118579' into /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/_temp_58b0a415-9720-49cc-a991-d2fdf60e0d71/d6d9ea87-7fd7-4636-a265-ca5913982025.tar.gz.
+[2022-03-10 23:15:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd597a67d-f245-4219-a9d8-fc52ddf92c48', success rate: 1/1.
+[2022-03-10 23:15:05Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2022-03-10 23:15:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd597a67d-f245-4219-a9d8-fc52ddf92c48', success rate: 1/1.
+[2022-03-10 23:15:07Z INFO ActionManager] Which: 'tar'
+[2022-03-10 23:15:07Z INFO ActionManager] Location: '/usr/bin/tar'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Starting process:
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/_temp_58b0a415-9720-49cc-a991-d2fdf60e0d71/d6d9ea87-7fd7-4636-a265-ca5913982025.tar.gz"'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Working directory: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/_temp_58b0a415-9720-49cc-a991-d2fdf60e0d71/_staging'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 59434.
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Process started with process id 59434, waiting for process exit.
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Finished process 59434 with exit code 0, and elapsed time 00:00:00.0307689.
+[2022-03-10 23:15:07Z INFO ActionManager] Finished getting action repository.
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-03-10 23:15:07Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:07Z INFO ActionManager] Load action that reference repository from '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/actions/checkout/v2'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-03-10 23:15:07Z INFO ActionManager] Action pre node.js file: N/A.
+[2022-03-10 23:15:07Z INFO ActionManager] Action node.js file: dist/index.js.
+[2022-03-10 23:15:07Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2022-03-10 23:15:07Z INFO JobExtension] Adding .
+[2022-03-10 23:15:07Z INFO JobExtension] Adding .
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:07Z INFO JobExtension] Total accessible running process: 299.
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "d597a67d-f245-4219-a9d8-fc52ddf92c48",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3
+}.
+[2022-03-10 23:15:07Z INFO JobRunner] Total job steps: 2.
+[2022-03-10 23:15:07Z INFO JobRunner] Run all job steps.
+[2022-03-10 23:15:07Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v2'
+[2022-03-10 23:15:07Z INFO StepsRunner] Evaluating: success()
+[2022-03-10 23:15:07Z INFO StepsRunner] Result: true
+[2022-03-10 23:15:07Z INFO StepsRunner] Starting the step.
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:07Z INFO ActionManager] Load action that reference repository from '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/actions/checkout/v2'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-03-10 23:15:07Z INFO ActionManager] Action pre node.js file: N/A.
+[2022-03-10 23:15:07Z INFO ActionManager] Action node.js file: dist/index.js.
+[2022-03-10 23:15:07Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2022-03-10 23:15:07Z INFO ExecutionContext] Reserve record order 4 to 6 for post job actions.
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:07Z INFO ActionRunner] Write event payload to /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp/_github_workflow/event.json
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "SebasAI95/dockerizepython"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2022-03-10 23:15:07Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2022-03-10 23:15:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command set-env
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command set-output
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command save-state
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command add-path
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command warning
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command error
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command notice
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command debug
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command group
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2022-03-10 23:15:07Z INFO ActionCommandManager] Register action command extension for command echo
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:07Z INFO HostContext] Well known directory 'Externals': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/externals'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Starting process:
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   File name: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/externals/node12/bin/node'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Arguments: '"/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/actions/checkout/v2/dist/index.js"'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Working directory: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/dockerizepython/dockerizepython'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 59437.
+[2022-03-10 23:15:07Z INFO ProcessInvokerWrapper] Process started with process id 59437, waiting for process exit.
+[2022-03-10 23:15:07Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2022-03-10 23:15:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2022-03-10 23:15:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2022-03-10 23:15:08Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper] Finished process 59437 with exit code 0, and elapsed time 00:00:01.0104860.
+[2022-03-10 23:15:08Z INFO CreateStepSummaryCommand] Step Summary is disabled; skipping attachment upload
+[2022-03-10 23:15:08Z INFO StepsRunner] Step result: 
+[2022-03-10 23:15:08Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v2",
+  "type": "node12",
+  "stage": "Main",
+  "stepId": "a60052d4-79a0-5821-3eeb-84adb9872c5b",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2
+}.
+[2022-03-10 23:15:08Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2022-03-10 23:15:08Z INFO StepsRunner] Current state: job state = ''
+[2022-03-10 23:15:08Z INFO StepsRunner] Processing step: DisplayName='Build and Run Docker'
+[2022-03-10 23:15:08Z INFO StepsRunner] Evaluating: success()
+[2022-03-10 23:15:08Z INFO StepsRunner] Result: true
+[2022-03-10 23:15:08Z INFO StepsRunner] Starting the step.
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:08Z INFO ActionRunner] Write event payload to /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp/_github_workflow/event.json
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2022-03-10 23:15:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command set-env
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command set-output
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command save-state
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command add-path
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command warning
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command error
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command notice
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command debug
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command group
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2022-03-10 23:15:08Z INFO ActionCommandManager] Register action command extension for command echo
+[2022-03-10 23:15:08Z INFO ScriptHandler] Which: 'bash'
+[2022-03-10 23:15:08Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:08Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:08Z INFO ScriptHandler] Which: 'bash'
+[2022-03-10 23:15:08Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper] Starting process:
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp/d9534a51-f8de-4097-916b-4885f9b57f0e.sh'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Working directory: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/dockerizepython/dockerizepython'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 59525.
+[2022-03-10 23:15:08Z INFO ProcessInvokerWrapper] Process started with process id 59525, waiting for process exit.
+[2022-03-10 23:15:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2022-03-10 23:15:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dd23db01-cff6-57a4-373a-5c8097a97333', success rate: 1/1.
+[2022-03-10 23:15:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dd23db01-cff6-57a4-373a-5c8097a97333', success rate: 1/1.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] Finished process 59525 with exit code 0, and elapsed time 00:00:00.8528413.
+[2022-03-10 23:15:09Z INFO CreateStepSummaryCommand] Step Summary is disabled; skipping attachment upload
+[2022-03-10 23:15:09Z INFO StepsRunner] Step result: 
+[2022-03-10 23:15:09Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "dd23db01-cff6-57a4-373a-5c8097a97333",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1
+}.
+[2022-03-10 23:15:09Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2022-03-10 23:15:09Z INFO StepsRunner] Current state: job state = ''
+[2022-03-10 23:15:09Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v2'
+[2022-03-10 23:15:09Z INFO StepsRunner] Evaluating: always()
+[2022-03-10 23:15:09Z INFO StepsRunner] Result: true
+[2022-03-10 23:15:09Z INFO StepsRunner] Starting the step.
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:09Z INFO ActionManager] Load action that reference repository from '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/actions/checkout/v2'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Actions': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions'
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-03-10 23:15:09Z INFO ActionManager] Action pre node.js file: N/A.
+[2022-03-10 23:15:09Z INFO ActionManager] Action node.js file: dist/index.js.
+[2022-03-10 23:15:09Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:09Z INFO ActionRunner] Write event payload to /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp/_github_workflow/event.json
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Work': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Temp': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp'
+[2022-03-10 23:15:09Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "SebasAI95/dockerizepython"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2022-03-10 23:15:09Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2022-03-10 23:15:09Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command set-env
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command set-output
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command save-state
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command add-path
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command warning
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command error
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command notice
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command debug
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command group
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2022-03-10 23:15:09Z INFO ActionCommandManager] Register action command extension for command echo
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Externals': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/externals'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] Starting process:
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   File name: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/externals/node12/bin/node'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Arguments: '"/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_actions/actions/checkout/v2/dist/index.js"'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Working directory: '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/dockerizepython/dockerizepython'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 59686.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] Process started with process id 59686, waiting for process exit.
+[2022-03-10 23:15:09Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2022-03-10 23:15:09Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2022-03-10 23:15:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '100ddd82-a371-4e14-bf8d-636e134db521', success rate: 1/1.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-03-10 23:15:09Z INFO ProcessInvokerWrapper] Finished process 59686 with exit code 0, and elapsed time 00:00:00.2939344.
+[2022-03-10 23:15:09Z INFO CreateStepSummaryCommand] Step Summary is disabled; skipping attachment upload
+[2022-03-10 23:15:09Z INFO StepsRunner] Step result: 
+[2022-03-10 23:15:09Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v2",
+  "type": "node12",
+  "stage": "Post",
+  "stepId": "100ddd82-a371-4e14-bf8d-636e134db521",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1
+}.
+[2022-03-10 23:15:09Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2022-03-10 23:15:09Z INFO StepsRunner] Current state: job state = ''
+[2022-03-10 23:15:09Z INFO JobRunner] Finalize job.
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:09Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:09Z INFO JobExtension] Initialize Env context
+[2022-03-10 23:15:09Z INFO JobExtension] Initialize steps context
+[2022-03-10 23:15:10Z INFO JobExtension] Total accessible running process: 316.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 135 (kworker/1:1H-kblockd)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/135/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/135/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 232 (kworker/5:1H-kblockd)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/232/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/232/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 295 (kworker/4:1H-kblockd)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/295/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/295/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 56948 (kworker/1:0-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/56948/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/56948/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 57453 (kworker/u12:1-events_power_efficient)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/57453/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/57453/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 57486 (kworker/u12:2-netns)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/57486/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/57486/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 57973 (kworker/0:0-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/57973/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/57973/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 58254 (kworker/1:1-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/58254/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/58254/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 58625 (kworker/5:0-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/58625/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/58625/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59034 (kworker/0:1-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59034/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59034/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59268 (kworker/5:3-wg-crypt-wg0)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59268/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59268/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59596 (systemd-udevd)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59596/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59596/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59597 (kworker/2:0-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59597/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59597/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59598 (systemd-udevd)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59598/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59598/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59604 (systemd-udevd)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59604/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59604/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59692 (kworker/3:1-wg-crypt-wg0)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59692/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59692/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59693 (kworker/3:3-wg-crypt-wg0)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59693/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59693/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59724 (kworker/1:2-cgroup_destroy)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59724/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59724/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59725 (kworker/1:3-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59725/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59725/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59726 (kworker/1:4-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59726/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59726/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59727 (kworker/1:5-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59727/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59727/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59728 (kworker/1:6-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59728/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59728/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59729 (kworker/1:7-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59729/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59729/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59730 (kworker/1:8-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59730/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59730/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59731 (kworker/1:9-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59731/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59731/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59732 (kworker/1:10-rcu_gp)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59732/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59732/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59733 (kworker/1:11-events)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59733/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59733/environ' is denied.
+[2022-03-10 23:15:10Z INFO JobExtension] Inspecting process environment variables. PID: 59734 (kworker/1:12-wg-crypt-wg0)
+[2022-03-10 23:15:10Z INFO LinuxProcessExtensions] Read env from /proc/59734/environ
+[2022-03-10 23:15:10Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/59734/environ' is denied.
+[2022-03-10 23:15:10Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_joh",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "dbc0e7ee-d068-4564-9a04-5b418d20497e",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1
+}.
+[2022-03-10 23:15:10Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2022-03-10 23:15:10Z INFO JobRunner] Completing the job execution context.
+[2022-03-10 23:15:10Z INFO JobRunner] Shutting down the job server queue.
+[2022-03-10 23:15:10Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2022-03-10 23:15:10Z INFO JobServerQueue] All queue process task stopped.
+[2022-03-10 23:15:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record '100ddd82-a371-4e14-bf8d-636e134db521', success rate: 1/1.
+[2022-03-10 23:15:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dbc0e7ee-d068-4564-9a04-5b418d20497e', success rate: 1/1.
+[2022-03-10 23:15:10Z INFO JobServerQueue] Web console line queue drained.
+[2022-03-10 23:15:10Z INFO JobServerQueue] Uploading 4 files in one shot.
+[2022-03-10 23:15:12Z INFO JobServerQueue] Try to upload 4 log files or attachments, success rate: 4/4.
+[2022-03-10 23:15:12Z INFO JobServerQueue] File upload queue drained.
+[2022-03-10 23:15:12Z INFO JobServerQueue] Timeline update queue drained.
+[2022-03-10 23:15:12Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2022-03-10 23:15:12Z INFO TempDirectoryManager] Cleaning runner temp folder: /home/sebastian/PycharmProjects/dockerizepython/actions-runner/_work/_temp
+[2022-03-10 23:15:12Z INFO HostContext] Well known directory 'Bin': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/bin'
+[2022-03-10 23:15:12Z INFO HostContext] Well known directory 'Root': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner'
+[2022-03-10 23:15:12Z INFO HostContext] Well known directory 'Diag': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag'
+[2022-03-10 23:15:12Z INFO HostContext] Well known config file 'Telemetry': '/home/sebastian/PycharmProjects/dockerizepython/actions-runner/_diag/.telemetry'
+[2022-03-10 23:15:12Z INFO JobRunner] Raising job completed event
+[2022-03-10 23:15:12Z INFO Worker] Job completed.
