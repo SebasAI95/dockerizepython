@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dockerizepython.iml" filepath="$PROJECT_DIR$/.idea/dockerizepython.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../tennis-ml/.idea/tennis-ml.iml" filepath="$PROJECT_DIR$/../tennis-ml/.idea/tennis-ml.iml" />
     </modules>
   </component>
 </project>
